@@ -5,6 +5,7 @@
 //  Created by Mari Batilando on 4/6/23.
 //
 
+//
 import Foundation
 
 struct TriviaQuestion {
@@ -12,4 +13,9 @@ struct TriviaQuestion {
   let question: String
   let correctAnswer: String
   let incorrectAnswers: [String]
+    
+    var allAnswersShuffled: [String] {
+        ([correctAnswer] + incorrectAnswers).shuffled()
+    }
 }
+
